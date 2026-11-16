@@ -3,8 +3,8 @@
   'use strict';
 
   var GITHUB_USER = 'Kartik-rana137';
-  // Repos already featured above; hidden from the "More on GitHub" grid.
-  var FEATURED = ['marsexplorer'];
+  // Repos hidden from the "More on GitHub" grid: ones featured above, and this site's own repo.
+  var FEATURED = ['marsexplorer', 'portfolio'];
 
   var root = document.documentElement;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

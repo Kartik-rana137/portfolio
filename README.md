@@ -1,6 +1,6 @@
 # kartikrana.work
 
-Personal portfolio of Kartik Rana: a light, professional design with a soft Frutiger Aero touch. It is a static site (HTML, CSS and vanilla JS) with no build step.
+Personal portfolio of Kartik Rana: a light, professional liquid glass design. It is a static site (HTML, CSS and vanilla JS) with no build step.
 
 ## Files
 

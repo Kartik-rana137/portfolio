@@ -143,7 +143,7 @@
         </header>
 
         <!-- Mars Explorer -->
-        <article class="project glass">
+        <article class="project glass" data-repo="MarsExplorer">
           <a class="project-media" href="https://github.com/Kartik-rana137/MarsExplorer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="assets/marsexplorer-800.jpg" srcset="assets/marsexplorer-800.jpg 800w, assets/marsexplorer.jpg 1600w" sizes="(max-width: 900px) calc(100vw - 72px), 560px" width="1600" height="960" loading="lazy" decoding="async"
                  alt="">
@@ -180,7 +180,7 @@
         </article>
 
         <!-- OrwellBlue -->
-        <article class="project project-flip glass">
+        <article class="project project-flip glass" data-repo="jagath-sajjan/OrwellBlue">
           <a class="project-media" href="https://github.com/jagath-sajjan/OrwellBlue" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="assets/orwellblue-800.jpg" srcset="assets/orwellblue-800.jpg 800w, assets/orwellblue.jpg 1600w" sizes="(max-width: 900px) calc(100vw - 72px), 560px" width="1600" height="960" loading="lazy" decoding="async" alt="">
           </a>
@@ -212,15 +212,37 @@
         </article>
 
         <!-- Live from GitHub -->
-        <div class="repos glass" aria-labelledby="repos-title">
+        <div class="repos glass" id="projects" aria-labelledby="repos-title">
           <div class="repos-head">
-            <h3 id="repos-title" class="repos-title">More on GitHub</h3>
-            <a class="link-arrow" href="https://github.com/Kartik-rana137?tab=repositories" target="_blank" rel="noopener">All repositories <span aria-hidden="true">↗</span></a>
+            <div>
+              <h3 id="repos-title" class="repos-title">All projects</h3>
+              <p class="repos-count" id="repo-count" aria-live="polite">Loading projects from GitHub…</p>
+            </div>
+            <a class="link-arrow" href="https://github.com/Kartik-rana137?tab=repositories" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="repo-grid" id="repo-grid" aria-live="polite">
-            <p class="repo-empty">New public repositories appear here automatically once they're on
-              <a href="https://github.com/Kartik-rana137" target="_blank" rel="noopener">GitHub</a>.</p>
+          <div class="repo-tools" id="repo-tools" hidden>
+            <label class="field field-search">
+              <span class="sr-only">Search projects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input type="search" id="repo-search" placeholder="Search by name, topic or description" autocomplete="off">
+            </label>
+            <label class="field field-select">
+              <span class="sr-only">Filter by language</span>
+              <select id="repo-lang"><option value="">All languages</option></select>
+            </label>
+            <label class="field field-select">
+              <span class="sr-only">Sort projects</span>
+              <select id="repo-sort">
+                <option value="updated">Recently updated</option>
+                <option value="stars">Most stars</option>
+                <option value="newest">Newest</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </label>
           </div>
+          <div class="repo-grid" id="repo-grid"></div>
+          <p class="repo-empty" id="repo-empty" hidden></p>
+          <div class="repo-more"><button class="btn btn-ghost" type="button" id="repo-more" hidden>Show more</button></div>
         </div>
       </div>
     </section>

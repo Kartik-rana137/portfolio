@@ -498,3 +498,37 @@ a.project-media::after { /* faint glass sheen over the screenshot */
   .tl-item { padding: 16px 18px; }
   .tl-item::after { left: -26px; }
 }
+
+/* ==========================================================
+   Lite mode — set by the inline script in <head> on phones,
+   low-memory / low-core devices, data-saver, or when the system
+   asks for reduced transparency. Same look, far less GPU work:
+   no live blur, no masked layers, no fixed full-screen layer,
+   small shadows, and off-screen sections skipped until needed.
+   ========================================================== */
+.lite body { position: relative; }
+.lite body::before {            /* colour field scrolls with the page: painted once, no fixed layer */
+  position: absolute; inset: 0;
+  transform: none; will-change: auto;
+}
+.lite .glass::before,
+.lite .site-header .header-inner::before { display: none; }   /* masked rim = extra render pass per panel */
+.lite .glass {
+  border-color: rgb(255 255 255 / .85);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .9), 0 4px 14px -8px rgb(20 40 80 / .28);
+}
+.lite .site-header .header-inner {
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  background: rgb(250 252 255 / .94);
+  box-shadow: inset 0 1px 0 #fff, 0 4px 14px -8px rgb(20 40 80 / .28);
+}
+.lite .btn-primary { box-shadow: inset 0 1px 1px rgb(255 255 255 / .5), 0 3px 8px -4px rgb(26 111 209 / .5); }
+.lite .btn-ghost { box-shadow: inset 0 1px 0 #fff, 0 3px 8px -5px rgb(20 40 80 / .3); }
+.lite .project-media { box-shadow: 0 4px 12px -8px rgb(20 40 80 / .35); }
+.lite a.project-media::after { display: none; }
+.lite .top-skill { box-shadow: inset 0 1px 0 rgb(255 255 255 / .7); }
+.lite .section { content-visibility: auto; contain-intrinsic-size: auto 1000px; }
+
+.lite[data-theme="dark"] .glass { border-color: rgb(255 255 255 / .12); box-shadow: inset 0 1px 0 rgb(255 255 255 / .08), 0 4px 14px -8px rgb(0 0 0 / .6); }
+.lite[data-theme="dark"] .site-header .header-inner { background: rgb(20 30 48 / .95); box-shadow: inset 0 1px 0 rgb(255 255 255 / .08); }
+.lite[data-theme="dark"] .btn-ghost { box-shadow: inset 0 1px 0 rgb(255 255 255 / .08); }

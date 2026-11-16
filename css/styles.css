@@ -355,53 +355,6 @@ a.project-media::after { /* faint glass sheen over the screenshot */
 }
 .project-links { display: flex; flex-wrap: wrap; gap: 10px; }
 
-/* ---------- OrwellBlue illustration (static) ---------- */
-.orwell {
-  padding: clamp(14px, 2.5vw, 22px);
-  background: linear-gradient(160deg, rgb(255 255 255 / .35), rgb(200 225 255 / .35));
-}
-:root[data-theme="dark"] .orwell { background: linear-gradient(160deg, rgb(255 255 255 / .06), rgb(80 140 220 / .10)); }
-.ob-window {
-  --ob-bg: rgb(14 26 46 / .94); --ob-line: #22385a; --ob-ink: #dce8f6; --ob-dim: #8aa2c0;
-  border-radius: 14px; overflow: hidden;
-  border: 1px solid rgb(255 255 255 / .55);
-  background: var(--ob-bg); color: var(--ob-ink);
-  font-size: 11.5px;
-  box-shadow: 0 14px 30px -16px rgb(16 36 62 / .5);
-}
-.ob-bar {
-  display: flex; align-items: center; gap: 6px;
-  padding: 9px 12px;
-  background: linear-gradient(180deg, rgb(255 255 255 / .92), rgb(225 236 248 / .88));
-  border-bottom: 1px solid rgb(15 33 56 / .15);
-}
-.ob-dot { width: 10px; height: 10px; border-radius: 50%; background: rgb(15 33 56 / .22); }
-.ob-title { margin-left: 8px; color: #2f4560; }
-.ob-live { margin-left: auto; color: #1f7a4a; font-size: 10.5px; letter-spacing: .08em; font-weight: 500; }
-
-.ob-grid { display: grid; grid-template-columns: .85fr 1.4fr; }
-.ob-fleet { padding: 12px; border-right: 1px solid var(--ob-line); }
-.ob-ledger { padding: 12px; min-width: 0; }
-.ob-label { margin: 0 0 8px; color: var(--ob-dim); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
-.ob-agents, .ob-events { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
-.ob-agents li { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
-.ob-agents em { margin-left: auto; font-style: normal; color: var(--ob-dim); font-size: 10.5px; }
-.ob-agents span { width: 7px; height: 7px; border-radius: 50%; flex: none; }
-.ob-agents .ok { background: #4cc488; }
-.ob-agents .warn { background: #e8b13c; }
-.ob-agents .bad { background: #ef6a55; }
-.ob-events li { display: flex; gap: 8px; white-space: nowrap; overflow: hidden; }
-.ob-events b { font-weight: 400; color: var(--ob-dim); }
-.ob-events i { margin-left: auto; font-style: normal; padding-left: 8px; }
-.ob-events .ok { color: #4cc488; }
-.ob-events .warn { color: #e8b13c; }
-.ob-events .bad { color: #ef6a55; }
-.ob-alert {
-  margin: 0 12px 12px; padding: 9px 11px; border-radius: 9px;
-  background: rgb(239 106 85 / .12); border: 1px solid rgb(239 106 85 / .35); color: #ffa696;
-}
-.ob-caption { margin: 10px 4px 0; font-size: 11.5px; color: var(--muted); }
-
 /* ---------- Repo grid (live from GitHub) ---------- */
 .repos { padding: clamp(20px, 3vw, 28px); }
 .repos-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
@@ -539,8 +492,4 @@ a.project-media::after { /* faint glass sheen over the screenshot */
   .timeline::before { left: 6px; }
   .tl-item { padding: 16px 18px; }
   .tl-item::after { left: -26px; }
-  .ob-grid { grid-template-columns: 1fr; }
-  .ob-fleet { border-right: 0; border-bottom: 1px solid var(--ob-line); }
-  .ob-agents { grid-template-columns: 1fr 1fr; column-gap: 14px; }
-  .ob-agents em { display: none; }
 }

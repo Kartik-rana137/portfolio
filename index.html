@@ -170,39 +170,9 @@
 
         <!-- OrwellBlue -->
         <article class="project project-flip glass">
-          <div class="project-media orwell" aria-hidden="true">
-            <div class="ob-window">
-              <div class="ob-bar">
-                <span class="ob-dot"></span><span class="ob-dot"></span><span class="ob-dot"></span>
-                <span class="ob-title mono">orwellblue · fleet monitor</span>
-                <span class="ob-live mono">LIVE</span>
-              </div>
-              <div class="ob-grid">
-                <div class="ob-fleet">
-                  <p class="ob-label mono">Agents</p>
-                  <ul class="ob-agents mono">
-                    <li><span class="ok"></span>agent-01 <em>sandboxed</em></li>
-                    <li><span class="ok"></span>agent-02 <em>sandboxed</em></li>
-                    <li><span class="warn"></span>agent-03 <em>watched</em></li>
-                    <li><span class="bad"></span>agent-04 <em>killed</em></li>
-                    <li><span class="ok"></span>agent-05 <em>sandboxed</em></li>
-                  </ul>
-                </div>
-                <div class="ob-ledger">
-                  <p class="ob-label mono">Forensic ledger</p>
-                  <ol class="ob-events mono" id="ob-events">
-                    <li><b>12:04:11</b> agent-02 tool_call read_file <i class="ok">allow</i></li>
-                    <li><b>12:04:12</b> agent-03 tool_call http_get <i class="warn">flag</i></li>
-                    <li><b>12:04:14</b> agent-04 exec rm -rf / <i class="bad">deny</i></li>
-                    <li><b>12:04:14</b> killswitch agent-04 <i class="bad">contained</i></li>
-                    <li><b>12:04:15</b> chain sha256 9f2c…e81a <i class="ok">verified</i></li>
-                  </ol>
-                </div>
-              </div>
-              <div class="ob-alert mono">⚠ Critical violation · agent-04 contained in 0.4 s</div>
-            </div>
-            <p class="ob-caption mono">Illustration of the dashboard</p>
-          </div>
+          <a class="project-media" href="https://github.com/jagath-sajjan/OrwellBlue" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/orwellblue.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="">
+          </a>
           <div class="project-body">
             <p class="project-meta mono">Team of 4 · Frontend lead</p>
             <h3 class="project-title">OrwellBlue</h3>

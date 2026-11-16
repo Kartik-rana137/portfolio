@@ -223,4 +223,37 @@
       emptyEl.textContent = 'Couldn’t load projects right now. See them all on GitHub.';
     });
   }
+
+  /* ---------- Certificate viewer ----------
+     Certificates are links to the image (so they work without JS); with JS they open in a dialog.
+     The image is only downloaded when a certificate is opened. */
+  var dialog = document.getElementById('cert-dialog');
+  if (dialog && typeof dialog.showModal === 'function') {
+    var certImg = document.getElementById('cert-img');
+    var certCap = document.getElementById('cert-caption');
+    var opener = null;
+    var closeCert = function () { if (dialog.open) dialog.close(); };
+
+    document.querySelectorAll('[data-cert]').forEach(function (btn) {
+      btn.setAttribute('aria-haspopup', 'dialog');
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        opener = btn;
+        var title = btn.getAttribute('data-cert-title') || 'Certificate';
+        certCap.textContent = title;
+        certImg.alt = title;
+        certImg.width = +btn.getAttribute('data-cert-w') || 1000;    // reserve space: no layout jump while loading
+        certImg.height = +btn.getAttribute('data-cert-h') || 700;
+        certImg.src = btn.getAttribute('data-cert');
+        dialog.showModal();
+      });
+    });
+    document.getElementById('cert-close').addEventListener('click', closeCert);
+    // click on the dimmed backdrop (outside the frame) closes it
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) closeCert(); });
+    dialog.addEventListener('close', function () {
+      certImg.removeAttribute('src');
+      if (opener) opener.focus();
+    });
+  }
 })();

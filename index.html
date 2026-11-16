@@ -74,6 +74,7 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#work">Work</a>
+        <a class="nav-wide" href="#hackathons">Hackathons</a>
         <a href="#about">About</a>
         <a class="nav-wide" href="#education">Education</a>
         <a class="nav-wide" href="#skills">Skills</a>
@@ -247,11 +248,85 @@
       </div>
     </section>
 
+    <!-- ============ HACKATHONS ============ -->
+    <section class="section" id="hackathons" aria-labelledby="hack-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">02 · Hackathons</p>
+          <h2 id="hack-title" class="section-title">Built against the clock</h2>
+        </header>
+        <div class="hack-grid">
+          <article class="hack glass">
+            <div class="hack-meta">
+              <span class="hack-chip">14–15 Nov 2026</span>
+              <span class="hack-chip">Global · 2 days</span>
+            </div>
+            <h3 class="hack-title">NASA Space Apps Challenge 2026</h3>
+            <p class="hack-org">Organised by NASA</p>
+            <p class="hack-desc">
+              NASA's annual global hackathon, held over one weekend at more than 500 local events around the world.
+              Teams take on challenges written by NASA experts and build solutions with NASA's free and open data.
+            </p>
+            <dl class="hack-facts">
+              <div><dt>Role</dt><dd>Lead developer, team of 6</dd></div>
+              <div><dt>Project</dt><dd><a href="#work">Mars Explorer</a>, a 3D planner for safe astronaut walks on Mars</dd></div>
+              <div><dt>Recognition</dt><dd>“Galactic Problem Solver” certificate</dd></div>
+            </dl>
+            <a class="btn btn-ghost cert-btn" href="assets/certificates/nasa-space-apps-2026.jpg"
+               data-cert="assets/certificates/nasa-space-apps-2026.jpg"
+               data-cert-title="NASA Space Apps Challenge 2026: Galactic Problem Solver certificate"
+               data-cert-w="1122" data-cert-h="780">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM9 14.2 8 21l4-2 4 2-1-6.8"/></svg>
+              View certificate
+            </a>
+          </article>
+
+          <article class="hack glass">
+            <div class="hack-meta">
+              <span class="hack-chip">2–3 Nov 2026</span>
+              <span class="hack-chip">36 hours</span>
+            </div>
+            <h3 class="hack-title">AARAMBH – The Beginning</h3>
+            <p class="hack-org">Tech Vedas, Dayananda Sagar University</p>
+            <p class="hack-desc">
+              A 36-hour hackathon organised by Tech Vedas, the technical club of the Department of CSE
+              (Artificial Intelligence and Data Science), School of Engineering, Dayananda Sagar University.
+            </p>
+            <dl class="hack-facts">
+              <div><dt>Role</dt><dd>Frontend lead, team of 4</dd></div>
+              <div><dt>Project</dt><dd><a href="#work">OrwellBlue</a>, containment and live monitoring for autonomous AI agents</dd></div>
+              <div><dt>Recognition</dt><dd>Certificate of participation</dd></div>
+            </dl>
+            <a class="btn btn-ghost cert-btn" href="assets/certificates/aarambh-2026.jpg"
+               data-cert="assets/certificates/aarambh-2026.jpg"
+               data-cert-title="AARAMBH – The Beginning: certificate of participation"
+               data-cert-w="1003" data-cert-h="711">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM9 14.2 8 21l4-2 4 2-1-6.8"/></svg>
+              View certificate
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate viewer: the image is only loaded when a "View certificate" button is clicked -->
+    <dialog class="cert-dialog" id="cert-dialog" aria-labelledby="cert-caption">
+      <div class="cert-frame glass">
+        <div class="cert-head">
+          <p class="cert-caption" id="cert-caption"></p>
+          <button class="icon-btn cert-close" type="button" id="cert-close" aria-label="Close certificate">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <img class="cert-img" id="cert-img" alt="" decoding="async">
+      </div>
+    </dialog>
+
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap"><div class="about glass">
         <header class="section-head">
-          <p class="eyebrow">02 · About</p>
+          <p class="eyebrow">03 · About</p>
           <h2 id="about-title" class="section-title">Engineer, builder, team lead</h2>
         </header>
         <div class="about-body">
@@ -280,7 +355,7 @@
     <section class="section" id="education" aria-labelledby="edu-title">
       <div class="wrap">
         <header class="section-head">
-          <p class="eyebrow">03 · Education</p>
+          <p class="eyebrow">04 · Education</p>
           <h2 id="edu-title" class="section-title">Where I've studied</h2>
         </header>
         <ol class="timeline">
@@ -320,7 +395,7 @@
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="wrap"><div class="skills glass">
         <header class="section-head">
-          <p class="eyebrow">04 · Skills</p>
+          <p class="eyebrow">05 · Skills</p>
           <h2 id="skills-title" class="section-title">What I work with</h2>
         </header>
         <ul class="top-skills" aria-label="Top skills">
@@ -396,7 +471,7 @@
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap"><div class="contact-card glass">
-        <p class="eyebrow">05 · Contact</p>
+        <p class="eyebrow">06 · Contact</p>
         <h2 id="contact-title" class="contact-title">Let's build something<br><em>worth using.</em></h2>
         <p class="contact-lede">Open to internships, collaborations and hackathon teams. Reach me on LinkedIn, or see my code on GitHub.</p>
         <div class="cta-row">

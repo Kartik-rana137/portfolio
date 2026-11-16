@@ -1,6 +1,6 @@
 # kartikrana.work
 
-Personal portfolio of Kartik Rana in a Frutiger Aero style. It is a static site (HTML, CSS and vanilla JS) with no build step.
+Personal portfolio of Kartik Rana: a light, professional design with a soft Frutiger Aero touch. It is a static site (HTML, CSS and vanilla JS) with no build step.
 
 ## Files
 
@@ -8,7 +8,7 @@ Personal portfolio of Kartik Rana in a Frutiger Aero style. It is a static site 
 index.html          The page
 404.html            "Page not found" page (GitHub Pages serves it automatically)
 css/styles.css      All styling; colour tokens for light and dark themes are at the top
-js/main.js          Theme toggle, bubbles, scroll reveal, live GitHub repo list
+js/main.js          Theme toggle (light by default) and the live GitHub repo list
 assets/             Favicon and project images
 CNAME               Custom domain for GitHub Pages (kartikrana.work)
 .nojekyll           Tells GitHub Pages to serve files as-is

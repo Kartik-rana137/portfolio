@@ -6,8 +6,7 @@
   <title>Kartik Rana · Developer</title>
   <meta name="description" content="Kartik Rana is a software engineer and B.Tech Computer Science (AI) student in Bengaluru. Projects include Mars Explorer, a 3D Mars EVA planner, and OrwellBlue, an AI agent containment system.">
   <link rel="canonical" href="https://kartikrana.work/">
-  <meta name="theme-color" content="#3fa9f5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#06162b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f9fd">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kartikrana.work/">
@@ -84,38 +83,8 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-      <div class="aero-scene" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="swoosh s1"></div>
-        <div class="swoosh s2"></div>
-        <div class="swoosh s3"></div>
-        <div class="cloud c1"></div>
-        <div class="cloud c2"></div>
-        <div class="cloud c3"></div>
-        <svg class="hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0"/>
-              <stop offset="1"/>
-            </linearGradient>
-            <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0"/>
-              <stop offset=".55"/>
-              <stop offset="1"/>
-            </linearGradient>
-            <linearGradient id="hillShine" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
-              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#hillBack)" d="M0 170 C 220 90, 420 110, 640 160 S 1060 110, 1240 120 S 1400 150, 1440 140 V320 H0 Z"/>
-          <path fill="url(#hillFront)" d="M0 250 C 260 170, 520 180, 760 230 S 1180 190, 1440 210 V320 H0 Z"/>
-          <path fill="url(#hillShine)" d="M60 236 C 300 174, 520 184, 740 226 C 520 200, 300 196, 60 246 Z"/>
-        </svg>
-        <div class="bubbles" id="bubbles"></div>
-      </div>
       <div class="wrap hero-inner">
-        <div class="hero-card glass">
+        <div class="hero-text">
           <p class="eyebrow">Software Engineer · AI · Game Development</p>
           <h1 class="hero-title">Kartik Rana</h1>
           <p class="hero-lede">
@@ -125,24 +94,44 @@
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#work">See my work</a>
-            <a class="btn btn-ghost" href="https://github.com/Kartik-rana137" target="_blank" rel="noopener">
-              GitHub <span aria-hidden="true">↗</span>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/kartik-rana137/" target="_blank" rel="noopener">
+              LinkedIn <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
+
+        <aside class="hero-card glass" aria-label="At a glance">
+          <div class="hc-head">
+            <span class="hc-avatar" aria-hidden="true">KR</span>
+            <div>
+              <p class="hc-name">Kartik Rana</p>
+              <p class="hc-role">Software Engineer</p>
+            </div>
+          </div>
+          <dl class="hc-facts">
+            <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
+            <div><dt>Studying</dt><dd>B.Tech CSE (AI), Dayananda Sagar University</dd></div>
+            <div><dt>Top skills</dt><dd>Software Development, Project Management, Team Leadership</dd></div>
+            <div><dt>Languages</dt><dd>English, German</dd></div>
+          </dl>
+          <div class="hc-links">
+            <a href="https://github.com/Kartik-rana137" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/kartik-rana137/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </aside>
       </div>
     </section>
 
     <!-- ============ WORK ============ -->
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
-        <header class="section-head reveal">
+        <header class="section-head">
           <p class="eyebrow">01 · Selected work</p>
           <h2 id="work-title" class="section-title">Things I've built</h2>
         </header>
 
         <!-- Mars Explorer -->
-        <article class="project glass reveal">
+        <article class="project glass">
           <a class="project-media" href="https://github.com/Kartik-rana137/MarsExplorer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="assets/marsexplorer.jpg" width="1600" height="960" loading="lazy" decoding="async"
                  alt="">
@@ -179,13 +168,13 @@
         </article>
 
         <!-- OrwellBlue -->
-        <article class="project project-flip glass reveal">
+        <article class="project project-flip glass">
           <div class="project-media orwell" aria-hidden="true">
             <div class="ob-window">
               <div class="ob-bar">
                 <span class="ob-dot"></span><span class="ob-dot"></span><span class="ob-dot"></span>
                 <span class="ob-title mono">orwellblue · fleet monitor</span>
-                <span class="ob-live mono">● LIVE</span>
+                <span class="ob-live mono">LIVE</span>
               </div>
               <div class="ob-grid">
                 <div class="ob-fleet">
@@ -241,7 +230,7 @@
         </article>
 
         <!-- Live from GitHub -->
-        <div class="repos glass reveal" aria-labelledby="repos-title">
+        <div class="repos glass" aria-labelledby="repos-title">
           <div class="repos-head">
             <h3 id="repos-title" class="repos-title">More on GitHub</h3>
             <a class="link-arrow" href="https://github.com/Kartik-rana137?tab=repositories" target="_blank" rel="noopener">All repositories <span aria-hidden="true">↗</span></a>
@@ -257,11 +246,11 @@
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap"><div class="about glass">
-        <header class="section-head reveal">
+        <header class="section-head">
           <p class="eyebrow">02 · About</p>
           <h2 id="about-title" class="section-title">Engineer, builder, team lead</h2>
         </header>
-        <div class="about-body reveal">
+        <div class="about-body">
           <p>
             I'm Kartik, a software engineer based in Bengaluru, studying for a B.Tech in Computer Science
             Engineering (AI) at Dayananda Sagar University. Before that I spent five years in Germany,
@@ -279,47 +268,41 @@
             and biotechnology), CAD design, and video editing.
           </p>
         </div>
-        <dl class="facts reveal">
-          <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
-          <div><dt>Studying</dt><dd>B.Tech CSE (AI), DSU</dd></div>
-          <div><dt>Focus</dt><dd>Software · AI · Games</dd></div>
-          <div><dt>Speaks</dt><dd>English, German</dd></div>
-        </dl>
       </div></div>
     </section>
 
     <!-- ============ EDUCATION ============ -->
     <section class="section" id="education" aria-labelledby="edu-title">
       <div class="wrap">
-        <header class="section-head reveal">
+        <header class="section-head">
           <p class="eyebrow">03 · Education</p>
           <h2 id="edu-title" class="section-title">Where I've studied</h2>
         </header>
         <ol class="timeline">
-          <li class="tl-item glass reveal is-current">
+          <li class="tl-item glass is-current">
             <p class="tl-date">Sep 2026 – Apr 2030 <span class="tl-badge">Current</span></p>
             <h3 class="tl-title">Dayananda Sagar University</h3>
             <p class="tl-sub">B.Tech, Computer Science Engineering (Artificial Intelligence)</p>
             <p class="tl-place">Bengaluru, India</p>
           </li>
-          <li class="tl-item glass reveal">
+          <li class="tl-item glass">
             <p class="tl-date">2025 – 2026</p>
             <h3 class="tl-title">E-CAD Technologies</h3>
             <p class="tl-sub">Diploma, AutoCAD (2D + 3D)</p>
           </li>
-          <li class="tl-item glass reveal">
+          <li class="tl-item glass">
             <p class="tl-date">Oct 2021 – Mar 2025</p>
             <h3 class="tl-title">University of Konstanz</h3>
             <p class="tl-sub">B.Sc. studies, Computer Science</p>
             <p class="tl-place">Konstanz, Germany</p>
           </li>
-          <li class="tl-item glass reveal">
+          <li class="tl-item glass">
             <p class="tl-date">2020 – 2021</p>
             <h3 class="tl-title">HTWG Konstanz, University of Applied Sciences</h3>
             <p class="tl-sub">Studienkolleg, Informatics</p>
             <p class="tl-place">Konstanz, Germany</p>
           </li>
-          <li class="tl-item glass reveal">
+          <li class="tl-item glass">
             <p class="tl-date">Graduated 2019</p>
             <h3 class="tl-title">Shah International School</h3>
             <p class="tl-sub">High School Diploma, Computer Science</p>
@@ -331,11 +314,11 @@
     <!-- ============ SKILLS ============ -->
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="wrap"><div class="skills glass">
-        <header class="section-head reveal">
+        <header class="section-head">
           <p class="eyebrow">04 · Skills</p>
           <h2 id="skills-title" class="section-title">What I work with</h2>
         </header>
-        <ul class="top-skills reveal" aria-label="Top skills">
+        <ul class="top-skills" aria-label="Top skills">
           <li class="top-skill">
             <span class="top-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg>
@@ -359,43 +342,43 @@
           </li>
         </ul>
         <div class="skill-groups">
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-blue" aria-hidden="true"></span>Programming</h3>
             <ul class="chips">
               <li>Python</li><li>TypeScript</li><li>C</li><li>C++</li><li>C#</li><li>Java</li><li>SQL</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-green" aria-hidden="true"></span>AI &amp; infrastructure</h3>
             <ul class="chips">
               <li>Artificial Intelligence</li><li>LLMOps</li><li>Docker</li><li>PostgreSQL</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-aqua" aria-hidden="true"></span>Frameworks &amp; libraries</h3>
             <ul class="chips">
               <li>Next.js</li><li>FastAPI</li><li>three.js</li><li>MapLibre GL</li><li>NumPy &amp; SciPy</li><li>Vite</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-teal" aria-hidden="true"></span>Design &amp; media</h3>
             <ul class="chips">
               <li>AutoCAD</li><li>AutoCAD Architecture</li><li>AutoCAD Mechanical</li><li>Adobe Premiere Pro</li><li>Adobe After Effects</li><li>Video Editing</li><li>Microsoft Excel</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-lime" aria-hidden="true"></span>Science &amp; research</h3>
             <ul class="chips">
               <li>Theoretical Physics</li><li>Chemical Engineering</li><li>Biotechnology</li><li>Technical Research</li><li>Analytical Skills</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-sky" aria-hidden="true"></span>Leadership &amp; communication</h3>
             <ul class="chips">
               <li>Team Management</li><li>Public Speaking</li><li>Technical Writing</li><li>Time Management</li><li>Communication</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-title"><span class="skill-orb orb-white" aria-hidden="true"></span>Languages</h3>
             <ul class="chips">
               <li>English</li><li>German</li>
@@ -407,7 +390,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap reveal"><div class="contact-card glass">
+      <div class="wrap"><div class="contact-card glass">
         <p class="eyebrow">05 · Contact</p>
         <h2 id="contact-title" class="contact-title">Let's build something<br><em>worth using.</em></h2>
         <p class="contact-lede">Open to internships, collaborations and hackathon teams. Reach me on LinkedIn, or see my code on GitHub.</p>

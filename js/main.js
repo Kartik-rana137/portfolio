@@ -7,7 +7,6 @@
   var FEATURED = ['marsexplorer', 'portfolio'];
 
   var root = document.documentElement;
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Year ---------- */
   var yearEl = document.getElementById('year');
@@ -17,8 +16,7 @@
   var toggle = document.getElementById('theme-toggle');
   function currentTheme() {
     var set = root.getAttribute('data-theme');
-    if (set) return set;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return set === 'dark' ? 'dark' : 'light'; // light unless the visitor picked dark
   }
   function updateToggleLabel() {
     if (!toggle) return;
@@ -32,75 +30,6 @@
       try { localStorage.setItem('theme', next); } catch (e) {}
       updateToggleLabel();
     });
-  }
-
-  /* ---------- Bubbles ---------- */
-  var bubbleBox = document.getElementById('bubbles');
-  if (bubbleBox && !reduceMotion) {
-    var count = window.innerWidth < 640 ? 9 : 16;
-    for (var i = 0; i < count; i++) {
-      var b = document.createElement('span');
-      var size = 14 + Math.random() * 46;
-      b.className = 'bubble';
-      b.style.width = b.style.height = size.toFixed(0) + 'px';
-      b.style.left = (Math.random() * 100).toFixed(1) + '%';
-      b.style.setProperty('--dur', (11 + Math.random() * 12).toFixed(1) + 's');
-      b.style.setProperty('--delay', (-Math.random() * 20).toFixed(1) + 's');
-      b.style.setProperty('--sway', ((Math.random() - 0.5) * 80).toFixed(0) + 'px');
-      bubbleBox.appendChild(b);
-    }
-  }
-
-  /* ---------- Reveal on scroll ---------- */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  /* ---------- OrwellBlue illustration: rolling event ledger ---------- */
-  var ledger = document.getElementById('ob-events');
-  if (ledger && !reduceMotion) {
-    var events = [
-      ['agent-01', 'tool_call list_dir', 'ok', 'allow'],
-      ['agent-05', 'tool_call write_file', 'ok', 'allow'],
-      ['agent-03', 'net egress 10.0.0.8', 'warn', 'flag'],
-      ['policy', 'rule no_shell_exec', 'ok', 'pass'],
-      ['agent-02', 'exec curl | sh', 'bad', 'deny'],
-      ['chain', 'sha256 3b7a…c04d', 'ok', 'verified'],
-      ['agent-05', 'tool_call read_file', 'ok', 'allow']
-    ];
-    var n = 0, t = new Date(); t.setHours(12, 4, 15, 0);
-    var tick = function () {
-      t = new Date(t.getTime() + 1000 + Math.random() * 2000);
-      var ev = events[n++ % events.length];
-      var li = document.createElement('li');
-      li.className = 'new';
-      var time = document.createElement('b');
-      time.textContent = t.toTimeString().slice(0, 8);
-      var tag = document.createElement('i');
-      tag.className = ev[2];
-      tag.textContent = ev[3];
-      li.appendChild(time);
-      li.appendChild(document.createTextNode(' ' + ev[0] + ' ' + ev[1] + ' '));
-      li.appendChild(tag);
-      ledger.insertBefore(li, ledger.firstChild);
-      while (ledger.children.length > 5) ledger.removeChild(ledger.lastChild);
-    };
-    var timer = null;
-    var ledgerIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting && !timer) timer = setInterval(tick, 2200);
-        else if (!e.isIntersecting && timer) { clearInterval(timer); timer = null; }
-      });
-    }) : null;
-    if (ledgerIO) ledgerIO.observe(ledger);
   }
 
   /* ---------- Live repositories from GitHub ---------- */

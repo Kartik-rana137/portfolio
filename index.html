@@ -52,6 +52,7 @@
     "name": "Kartik Rana",
     "url": "https://kartikrana.work/",
     "jobTitle": "Software Engineer",
+    "image": "https://kartikrana.work/assets/about.jpg",
     "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University of Konstanz" },
@@ -69,7 +70,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Kartik Rana, home">
-        <span class="brand-mark" aria-hidden="true">KR</span>
+        <img class="brand-mark" src="assets/avatar.jpg" width="38" height="38" alt="" decoding="async">
         <span class="brand-name">Kartik Rana</span>
       </a>
       <nav class="nav" aria-label="Primary">
@@ -115,7 +116,7 @@
 
         <aside class="hero-card glass" aria-label="At a glance">
           <div class="hc-head">
-            <span class="hc-avatar" aria-hidden="true">KR</span>
+            <img class="hc-avatar" src="assets/avatar.jpg" width="54" height="54" alt="" decoding="async">
             <div>
               <p class="hc-name">Kartik Rana</p>
               <p class="hc-role">Software Engineer</p>
@@ -325,10 +326,15 @@
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap"><div class="about glass">
-        <header class="section-head">
-          <p class="eyebrow">03 · About</p>
-          <h2 id="about-title" class="section-title">Engineer, builder, team lead</h2>
-        </header>
+        <div class="about-side">
+          <header class="section-head">
+            <p class="eyebrow">03 · About</p>
+            <h2 id="about-title" class="section-title">Engineer, builder, team lead</h2>
+          </header>
+          <figure class="about-photo">
+            <img src="assets/about.jpg" width="720" height="960" loading="lazy" decoding="async" alt="Kartik Rana">
+          </figure>
+        </div>
         <div class="about-body">
           <p>
             I'm Kartik, a software engineer based in Bengaluru, studying for a B.Tech in Computer Science

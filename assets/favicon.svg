@@ -1,17 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#63d0ff"/><stop offset=".55" stop-color="#0a8ad8"/><stop offset="1" stop-color="#0567b0"/>
+    <linearGradient id="tile" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#5aa9f2"/>
+      <stop offset=".55" stop-color="#1a6fd1"/>
+      <stop offset="1" stop-color="#1658a8"/>
     </linearGradient>
-    <radialGradient id="grass" cx=".5" cy="1.15" r=".6">
-      <stop offset="0" stop-color="#9cf06a"/><stop offset="1" stop-color="#9cf06a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <circle cx="32" cy="32" r="30" fill="url(#g)"/>
-  <circle cx="32" cy="32" r="30" fill="url(#grass)"/>
-  <ellipse cx="32" cy="18" rx="21" ry="13" fill="url(#shine)"/>
-  <text x="32" y="41" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="24" fill="#fff">KR</text>
+  <!-- glossy blue tile -->
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#tile)"/>
+  <path d="M4 20 C4 10 10 4 20 4 H44 C54 4 60 10 60 20 V24 C46 30 18 30 4 24 Z" fill="url(#gloss)"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="16.5" fill="none" stroke="#fff" stroke-opacity=".45"/>
+  <!-- stylised KR, drawn as strokes so it looks the same everywhere -->
+  <g fill="none" stroke="#fff" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(-1.5 0)">
+    <path d="M17 18 V46"/>
+    <path d="M31 18 L19.8 32.2"/>
+    <path d="M23.4 28.6 L32 46"/>
+    <path d="M37.5 46 V18 H43.5 A7 7 0 0 1 43.5 32 H37.5"/>
+    <path d="M43 32 L50 46"/>
+  </g>
 </svg>

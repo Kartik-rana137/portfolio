@@ -13,7 +13,9 @@
   --blob-4: rgb(255 205 170 / .30);   /* peach */
 
   /* Glass */
-  --glass-fill: linear-gradient(135deg, rgb(255 255 255 / .66) 0%, rgb(255 255 255 / .40) 100%);
+  /* Panels don't live-blur (too costly while scrolling); a denser frosted fill gives the same look
+     because the colour field behind them is already soft. */
+  --glass-fill: linear-gradient(135deg, rgb(255 255 255 / .80) 0%, rgb(255 255 255 / .58) 100%);
   --glass-fill-strong: linear-gradient(135deg, rgb(255 255 255 / .82) 0%, rgb(255 255 255 / .60) 100%);
   --glass-inset: rgb(255 255 255 / .50);
   --glass-inset-border: rgb(255 255 255 / .75);
@@ -25,7 +27,7 @@
     inset 0 -1px 0 rgb(255 255 255 / .25),
     0 1px 2px rgb(20 40 80 / .05),
     0 14px 36px -14px rgb(20 40 80 / .22);
-  --blur: blur(26px) saturate(175%);
+  --blur: blur(14px) saturate(160%);   /* header only */
 
   /* Text & accents */
   --ink: #0f2138;
@@ -57,7 +59,7 @@
   --blob-2: rgb(20 140 130 / .35);
   --blob-3: rgb(110 80 200 / .35);
   --blob-4: rgb(200 110 70 / .15);
-  --glass-fill: linear-gradient(135deg, rgb(255 255 255 / .12) 0%, rgb(255 255 255 / .05) 100%);
+  --glass-fill: linear-gradient(135deg, rgb(40 56 84 / .72) 0%, rgb(22 34 56 / .62) 100%);
   --glass-fill-strong: linear-gradient(135deg, rgb(255 255 255 / .16) 0%, rgb(255 255 255 / .08) 100%);
   --glass-inset: rgb(255 255 255 / .06);
   --glass-inset-border: rgb(255 255 255 / .12);
@@ -98,6 +100,8 @@ body {
 /* Static colour field the glass refracts. Fixed so panels always have colour behind them. */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  transform: translateZ(0);   /* own GPU layer: painted once, not on every scroll frame */
+  will-change: transform;
   background:
     radial-gradient(42% 38% at 12% 8%,  var(--blob-1), transparent 70%),
     radial-gradient(38% 36% at 92% 18%, var(--blob-3), transparent 70%),
@@ -134,6 +138,9 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   box-shadow: var(--glass-shadow);
+}
+/* Only the small sticky header blurs what scrolls beneath it */
+.site-header .header-inner {
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
 }
@@ -148,7 +155,7 @@ p { margin: 0 0 1em; }
   pointer-events: none;
 }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass, .site-header .header-inner { background: var(--glass-fill-strong); }
+  .site-header .header-inner { background: var(--glass-fill-strong); }
 }
 
 /* Inset glass for elements that sit inside a panel (no extra blur needed) */
@@ -231,8 +238,6 @@ p { margin: 0 0 1em; }
   background: var(--glare), var(--glass-fill-strong);
   border-color: var(--glass-border);
   box-shadow: var(--glass-shadow);
-  backdrop-filter: var(--blur);
-  -webkit-backdrop-filter: var(--blur);
 }
 .btn-ghost:hover { color: var(--accent); }
 .btn-lg { padding: 15px 26px; font-size: 16px; }

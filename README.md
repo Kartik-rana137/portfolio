@@ -17,7 +17,7 @@ CNAME                         Custom domain (kartikrana.work)
 
 ## All projects (built for hundreds of repos)
 
-The **All projects** list shows every public repo you own, with search, a language filter, sorting and a **Show more** button (12 at a time, 6 on phones).
+The **All projects** list shows your public, non-fork repositories, excluding this portfolio website, with search, a language filter, sorting and a **Show more** button (12 at a time, 6 on phones).
 
 - **Updates itself.** The deploy workflow runs on every push and once a day. It snapshots all your repos into `data/repos.json` (paging through the GitHub API, up to 5,000 repos) and publishes the site. Visitors load that one file instead of calling GitHub, so there are no rate limits. To refresh right away: **Actions → Deploy site → Run workflow**.
 - **Feature a repo:** add the topic `portfolio-featured` to it on GitHub. It is pinned to the top with a *Featured* badge.

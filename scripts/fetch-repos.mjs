@@ -10,6 +10,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
 const USER = process.env.GITHUB_USER || 'Kartik-rana137';
+const PORTFOLIO_REPO = `${USER}/portfolio`.toLowerCase();
 const OUT = new URL('../data/repos.json', import.meta.url);
 const headers = {
   Accept: 'application/vnd.github+json',
@@ -33,7 +34,8 @@ async function fetchAll() {
 
 const raw = await fetchAll();
 const repos = raw
-  .filter((r) => !r.private && !r.fork && !(r.topics || []).includes('portfolio-hide'))
+  .filter((r) => !r.private && !r.fork && r.full_name.toLowerCase() !== PORTFOLIO_REPO
+    && !(r.topics || []).includes('portfolio-hide'))
   .map((r) => ({
     name: r.name,
     description: r.description || '',

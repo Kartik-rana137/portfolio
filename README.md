@@ -51,3 +51,4 @@ GitHub Pages, deployed by the workflow (**Settings → Pages → Source: GitHub 
 - **Copy:** the hero, project cards, About, Education and Skills are plain HTML in `index.html`.
 - **New showcased project:** copy one of the `<article class="project ..." data-repo="...">` blocks in `index.html` and set `data-repo` to the repo name.
 - **Email:** the contact section has a commented-out email button. Uncomment it and add your address.
+- **CV:** `assets/Kartik-Rana-CV.pdf` is the public CV linked from the hero, profile card and contact section. It shows email and links only, no phone or address. It is generated from a private source kept outside this repo, so replace the PDF file to update it.

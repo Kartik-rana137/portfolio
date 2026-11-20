@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kartik Rana · Software Engineer</title>
-  <meta name="description" content="Kartik Rana is a software engineer and B.Tech Computer Science (AI) student in Bengaluru. Projects include Mars Explorer, a 3D Mars EVA planner, and OrwellBlue, an AI agent containment system.">
+  <meta name="description" content="Kartik Rana is a software engineer and B.Tech Computer Science (AI) student in Bengaluru. Projects include ALICE, a local AI mentor, Mars Explorer, a 3D Mars EVA planner, and OrwellBlue, an AI agent containment system.">
   <link rel="canonical" href="https://kartikrana.work/">
   <meta name="theme-color" content="#f5f9fd">
 
@@ -151,8 +151,43 @@
           <h2 id="work-title" class="section-title">Things I've built</h2>
         </header>
 
+        <!-- ALICE -->
+        <article class="project glass" data-repo="ALICE">
+          <a class="project-media" href="https://github.com/Kartik-rana137/ALICE" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/alice-800.jpg" srcset="assets/alice-800.jpg 800w, assets/alice.jpg 1154w" sizes="(max-width: 900px) calc(100vw - 72px), 560px" width="1154" height="692" loading="lazy" decoding="async" alt="">
+          </a>
+          <div class="project-body">
+            <p class="project-meta mono">Bachelor thesis project · Nov 2026</p>
+            <h3 class="project-title">ALICE</h3>
+            <p class="project-sub">A local AI mentor for coding, coursework and research</p>
+            <p>
+              ALICE (Advanced Language Inference and Computational Engine) is an AI mentor that runs entirely on your own GPU.
+              She gives the full solution first, walks you through it step by step, and ends study answers with one question
+              to check you understood it. Expect a little sass about the topic, never about you.
+            </p>
+            <ul class="highlights">
+              <li>Runs Qwen3.5-9B locally through llama.cpp; conversations, papers and memory never leave your computer.</li>
+              <li>Answers from your own papers and textbooks with cited passages (hybrid vector and keyword search), and flags citations or numbers that weren't retrieved.</li>
+              <li>Checks her own work: a calculator for every number, and Python, C, C++ and Java code is run, with your OK, before she shows it.</li>
+              <li>A desktop window with typeset maths and runnable code blocks, plus long-term memory that stays on your machine.</li>
+            </ul>
+            <dl class="stats">
+              <div><dt>Median time to first word</dt><dd>~1 s</dd></div>
+              <div><dt>Languages she can run</dt><dd>4</dd></div>
+              <div><dt>Parameter model, on your GPU</dt><dd>9B</dd></div>
+            </dl>
+            <ul class="chips" aria-label="Built with">
+              <li>Python</li><li>llama.cpp</li><li>Qwen3.5-9B</li><li>RAG</li><li>JavaScript</li><li>WebView2</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://github.com/Kartik-rana137/ALICE" target="_blank" rel="noopener">View source <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="https://github.com/Kartik-rana137/ALICE/blob/main/docs/DEVLOG.md" target="_blank" rel="noopener">Read the dev log <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
         <!-- Mars Explorer -->
-        <article class="project glass" data-repo="MarsExplorer">
+        <article class="project project-flip glass" data-repo="MarsExplorer">
           <a class="project-media" href="https://github.com/Kartik-rana137/MarsExplorer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="assets/marsexplorer-800.jpg" srcset="assets/marsexplorer-800.jpg 800w, assets/marsexplorer.jpg 1600w" sizes="(max-width: 900px) calc(100vw - 72px), 560px" width="1600" height="960" loading="lazy" decoding="async"
                  alt="">
@@ -189,7 +224,7 @@
         </article>
 
         <!-- OrwellBlue -->
-        <article class="project project-flip glass" data-repo="jagath-sajjan/OrwellBlue">
+        <article class="project glass" data-repo="jagath-sajjan/OrwellBlue">
           <a class="project-media" href="https://github.com/jagath-sajjan/OrwellBlue" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="assets/orwellblue-800.jpg" srcset="assets/orwellblue-800.jpg 800w, assets/orwellblue.jpg 1600w" sizes="(max-width: 900px) calc(100vw - 72px), 560px" width="1600" height="960" loading="lazy" decoding="async" alt="">
           </a>
